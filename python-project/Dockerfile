@@ -2,9 +2,11 @@ FROM python:3.10-buster
 
 WORKDIR /app
 
-COPY . .
+COPY ./requirements/backend.txt .
 
-RUN pip install --no-cache-dir -r ./requirements/backend.in
+RUN pip install --no-cache-dir -r backend.txt
+
+COPY . .
 
 EXPOSE 80
 
