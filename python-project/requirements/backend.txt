@@ -24,6 +24,8 @@ httptools==0.4.0
     # via uvicorn
 idna==3.3
     # via anyio
+numpy==1.22.3
+    # via -r .\requirements\backend.in
 pydantic==1.9.0
     # via
     #   -r .\requirements\backend.in
