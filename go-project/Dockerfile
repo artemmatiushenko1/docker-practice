@@ -12,7 +12,7 @@ COPY . .
 RUN CGO_ENABLED=0 go build -v -o ./build/fizzbuzz .
 
 # stage 2
-FROM scratch
+FROM gcr.io/distroless/static
 
 COPY --from=build /usr/src/app/build/fizzbuzz /app/fizzbuzz
 
